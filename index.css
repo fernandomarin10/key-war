@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.general-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.general-title{
+    margin-top: 20px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+}
+
+.red-container{
+    background-color: red;
+    width: 50%;
+    height: 100%;
+}
+
+.blue-container{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
+
+.keys-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left-key{
+    width: 50%;
+}
+
+.right-key{
+    width: 50%;
+}
