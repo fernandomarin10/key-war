@@ -13,7 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         leftPlayerContainer.style.width = red+"%"
         rightPlayerContainer.style.width = blue+"%"
-      }, false);
+        if(checkIfBlueWinGame({redPlayer: red, bluePlayer: blue})){
+            alert("player blue wins!");
+            event.stopPropagation();
+        }
+        if(checkIfRedWinGame({redPlayer: red, bluePlayer: blue})){
+            alert("player red wins!");
+            event.stopPropagation();
+        }
+    }, false);
 });
 
 
@@ -27,4 +35,13 @@ const addPointsToRightPlayer = () => {
     blue += 5;
     red -=5;
     console.log({"red": red, "blue": blue})
+}
+
+const checkIfBlueWinGame = ({redPlayer, bluePlayer}) => {
+    if(redPlayer === 0 && bluePlayer === 100) return true;
+    return false;
+}
+const checkIfRedWinGame = ({redPlayer, bluePlayer}) => {
+    if(redPlayer === 100 && bluePlayer === 0) return true;
+    return false;
 }
